@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for item in object_list %}
+<h1>{{item.title}}</h1>
+<h3>{{item.content}}</h3>
+<h3>{{item.date}}</h3>
+
+<br>
+
+<h3>Категории:</h3>
+{% for cat in item.category.all%}
+    <h2>{{cat}}</h2>
+{% endfor %}
+
+<br>
+
+<h3>Коментарии:</h3>
+{% for i in item.comments.all%}
+    <h2>{{i}}</h2>
+    {%for com in coms%}
+        {{com.username}}
+        {% if i.coms == i.id %}
+            <p>{{com.user.username}}</p>
+        {% endif%}
+    {% endfor %}
+{% endfor %}
+
+
+<hr>
+<br>
+<hr>
+{% endfor %}
+</body>
+</html>

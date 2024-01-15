@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Montserrat:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'shop/css/styles.css'%}">
+</head>
+<body>
+    <div class='header'>
+    <h1 class='MainTitle'>Товары</h1>
+    <h1 class='MainTitle'><a link='/orders'>Заказы</a></h1>
+
+    </div>
+{% for item in object_list %}
+<div class='main'>
+    <div class='product__border'>
+        <h1>{{item.title}}</h1>
+
+        <img class="pic" src="{{item.image.url}}">
+        
+        <h3>Цена: {{item.price}}</h3>
+        <button class='btn'>Оформить покупку</button>
+    </div>
+</div>
+
+{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+.pic {
+    border-radius: 15px;
+    border: 1px solid #aaa;
+}
+
+body {
+    font-family: Montserrat;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product__border {
+    border: 2px solid #000;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+}
+.btn {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: Montserrat;
+}
+
+.btn:hover{
+    background-color: #bd71c0;
+    color: #fff;
+    border: none;
+}

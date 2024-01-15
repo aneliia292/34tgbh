@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Montserrat:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'shop/css/styles.css'%}">
+</head>
+<body>
+<h1>Заказ</h1>
+
+{{object.title}}
+<hr>
+<img class="pic" src="{{object.image.url}}">
+<hr>
+<h3>Цена: {{object.price}}</h3>
+<button class='btn'>Оформить покупку</button>
+</body>
+</html>
